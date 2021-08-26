@@ -1,2 +1,2 @@
-# Nictiz-R4-BgZ-W
+# Nictiz-R4-Wijzigingsverzoek
 Patient wijzigingsverzoek repository
