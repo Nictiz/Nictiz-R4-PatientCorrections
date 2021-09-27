@@ -1,6 +1,6 @@
 # Nictiz-R4-PatientCorrections
 
-This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for Patient Corrections information standard.
+This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for Patient Corrections information standard. Currently in development and therefore not yet suitable for implementarion.
 
 This repository is maintained by the Dutch National Intitute for ICT in Healthcare (Nictiz).
 
