@@ -11,3 +11,7 @@ Resources in this repository should be considered unstable and not suited for im
 ## Profiling guidelines
 
 The profiling guidelines for this project can be found at the [informatiestandaarden wiki](http://informatiestandaarden.nictiz.nl/wiki/FHIR:V1.0_FHIR_Profiling_Guidelines_R4).
+
+## Dependencies
+
+This information standard is inspired by and re-uses some materials from the [Patient Corrections Implementation Guide](https://build.fhir.org/ig/HL7/fhir-patient-correction/index.html).
