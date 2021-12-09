@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="dwv-PatientCorrectionsCommunication" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
+    <valueString value="Clinical.Request &amp;amp; Response" />
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
+    <valueCode value="patient" />
+  </extension>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication" />
+  <version value="0.1.0" />
+  <name value="DwvPatientCorrectionsCommunication" />
+  <title value="dwv PatientCorrectionsCommunication" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A Communication resource as used within the Patient Corrections (Dutch: Dossierwijzigingsverzoek) information standard. \n\n*NOTE*: this profile is inspired by the http://hl7.org/fhir/uv/patient-corrections/StructureDefinition/patient-correction-communication profile version 0.4.3 and tries to mimic it as closely as possible. However, different choices have been made on several key points in order to align with other FHIR materials in the Dutch realm. Therefore, this is not a derived profile.\nDifferences include: TODO \n- This profile is based on FHIR version 4.0.1, which was the latest R4 version at the moment of creation." />
+  <purpose value="TODO" />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Communication" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Communication" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Communication.inResponseTo">
+      <path value="Communication.inResponseTo" />
+      <short value="Patient Correction Request Communication that this is in response to. This will only be filled in if it represents a response to another Communication resource.  It can be used to query and assemble conversation threads related to the request process." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Communication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/dwv-Communication" />
+      </type>
+      <mustSupport value="false" />
+    </element>
+    <element id="Communication.status">
+      <path value="Communication.status" />
+      <short value="Fixed: completed." />
+      <patternCode value="completed" />
+    </element>
+    <element id="Communication.category">
+      <path value="Communication.category" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="false" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/fhir/uv/patient-corrections/ValueSet/PatientCorrectionCommunicationTypesVS" />
+      </binding>
+    </element>
+    <element id="Communication.subject">
+      <path value="Communication.subject" />
+      <short value="The Patient that the correction request or the log disagreement applies to." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+      <mustSupport value="false" />
+    </element>
+    <element id="Communication.topic">
+      <path value="Communication.topic" />
+      <short value="A heading/subject line for the message being sent. Could be thought of as the subject line in an email thread." />
+      <mustSupport value="false" />
+    </element>
+    <element id="Communication.about">
+      <path value="Communication.about" />
+      <short value="If this is the original Patient Correction Request  then Communication.about will initially be empty when posted by the Requester but populated with the Request for Correction Task reference by the Fulfiller when the Fulfiller spawn a Task to represent the Request for Correction or Logging of Disagreement process. For all subsequent Communication resources that represent conversations help between Requester and Fulfiller as part of the process,,Communication.about references the Communication resource that contains the original request. If this Communication represents the start of a Log Disagreement request, then when the Fulfiller spawns a Task to support the logging of the disagreement, Communication.about will also reference the spawned Task." />
+      <max value="2" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/dwv-Communication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/dwv-Task" />
+      </type>
+      <mustSupport value="false" />
+    </element>
+    <element id="Communication.sent">
+      <path value="Communication.sent" />
+      <short value="The date that this particular part of the conversation is sent.  On the initial request from the Requestor for either correction or logging a disagreement, this date/time will be used as Task.authoredOn to signify when the process was initiated on the Fulfiller." />
+      <min value="1" />
+    </element>
+    <element id="Communication.recipient">
+      <path value="Communication.recipient" />
+      <short value="Depending on the direction of the patient correction communication, the recipient of the communication may be the Fulfiller, or it may be the Requester." />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+      <mustSupport value="false" />
+    </element>
+    <element id="Communication.sender">
+      <path value="Communication.sender" />
+      <short value="Depending on the direction of the patient correction communication, the sender of the communication may be the Requester or it may be the Fulfiller.  On the initial request for correction or logging of disagreement, the Fulfiller will use sender to represent the Task.requester." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+      <mustSupport value="false" />
+    </element>
+    <element id="Communication.payload">
+      <path value="Communication.payload" />
+      <short value="The contents of this particular conversation component. If this is the original correction request or logging of a disagreement, then the payload would contain the request. If it is the final outcome of the request, then the payload would contain the final outcome information.  Otherwise it contains a single message in back and forth conversation needed to process the initial request. Since it is possible to have a Communication resource reference a conversation held outside of the FHIR Rest protocol (email, mail, portal messaging – see Communication.channel) the minimum cardinality is zero.  However, it is expected in most cases payload will be valued." />
+      <mustSupport value="false" />
+    </element>
+    <element id="Communication.note">
+      <path value="Communication.note" />
+      <short value="Notes from those that are working on the correction about that work (this is not the correction request itself)." />
+    </element>
+  </differential>
+</StructureDefinition>
