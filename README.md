@@ -14,4 +14,4 @@ The profiling guidelines for this project can be found at the [informatiestandaa
 
 ## Dependencies
 
-This information standard is inspired by and re-uses some materials from the [Patient Corrections Implementation Guide](https://build.fhir.org/ig/HL7/fhir-patient-correction/index.html).
+This information standard is inspired by and re-uses some materials from the international [HL7 Patient Corrections Implementation Guide](https://build.fhir.org/ig/HL7/fhir-patient-correction/index.html).
