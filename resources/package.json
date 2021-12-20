@@ -1,0 +1,26 @@
+{
+    "name": "nictiz.fhir.nl.r4.patientcorrections ",
+    "version": "dev",
+    "homepage": "",
+    "title": "FHIR implementation of Patient Corrections",
+    "description": "NL package of FHIR STU3 conformance resources for Patient Corrections.",
+    "dependencies": {
+        "nictiz.fhir.nl.r4.zib2020": "0.1.0-beta1",
+        "hl7.fhir.r4.core": "4.0.x"
+    },
+    "keywords": [
+        "nl",
+        "Nictiz",
+        "Patient Corrections",
+        "Dossierwijzigingsverzoek",
+        "MedMij"
+    ],
+    "author": "Nictiz",
+    "maintainers": [
+        {
+            "name": "Nictiz",
+            "email": "info@nictiz.nl"
+        }
+    ],
+    "license": "CC0-1.0"
+}

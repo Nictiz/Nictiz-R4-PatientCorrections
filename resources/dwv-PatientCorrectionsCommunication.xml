@@ -21,8 +21,8 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Communication resource as used within the Patient Corrections (Dutch: Dossierwijzigingsverzoek) information standard. \n\n*NOTE*: this profile is inspired by the http://hl7.org/fhir/uv/patient-corrections/StructureDefinition/patient-correction-communication profile version 0.4.3 and tries to mimic it as closely as possible. However, different choices have been made on several key points in order to align with other FHIR materials in the Dutch realm. Therefore, this is not a derived profile.\nDifferences include: TODO \n- This profile is based on FHIR version 4.0.1, which was the latest R4 version at the moment of creation." />
-  <purpose value="TODO" />
+  <description value="A Communication resource as used within the Patient Corrections (Dutch: Dossierwijzigingsverzoek) information standard. *NOTE*: this profile is inspired by the http://hl7.org/fhir/uv/patient-corrections/StructureDefinition/patient-correction-communication profile version 0.4.5 and tries to mimic it as closely as possible. However, different choices have been made on several key points in order to align with other FHIR materials in the Dutch realm. Therefore, this is not a derived profile.&amp;#xD;&amp;#xA;Differences include:&amp;#xD;&amp;#xA; *coming soon*.&amp;#xD;&amp;#xA; This profile is based on FHIR version 4.0.1, which was the latest R4 version at the moment of creation." />
+  <purpose value="*coming soon*" />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -40,12 +40,26 @@
     <uri value="http://hl7.org/v3" />
     <name value="RIM Mapping" />
   </mapping>
+  <mapping>
+    <identity value="art-decor-dossierwijzigingsverzoek" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--dwv-?id=2.16.840.1.113883.2.4.3.11.60.130.1.1&amp;effectiveDate=2021-11-17T16%3A56%3A44" />
+    <name value="ART-DECOR Dataset Dossierwijzigingsverzoek" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Communication" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Communication" />
   <derivation value="constraint" />
   <differential>
+    <element id="Communication.identifier">
+      <path value="Communication.identifier" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-40" />
+      </mapping>
+    </element>
     <element id="Communication.inResponseTo">
       <path value="Communication.inResponseTo" />
       <short value="Patient Correction Request Communication that this is in response to. This will only be filled in if it represents a response to another Communication resource.  It can be used to query and assemble conversation threads related to the request process." />
@@ -53,24 +67,38 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Communication" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/dwv-Communication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication" />
       </type>
       <mustSupport value="false" />
     </element>
     <element id="Communication.status">
       <path value="Communication.status" />
       <short value="Fixed: completed." />
-      <patternCode value="completed" />
+      <fixedCode value="completed" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-41" />
+      </mapping>
     </element>
     <element id="Communication.category">
       <path value="Communication.category" />
       <min value="1" />
       <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="https://hl7.org/fhir/uv/fhir-patient-correction/CodeSystem/PatientCorrectionCommunicationTypes" />
+          <code value="medRecCxReq" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="false" />
       <binding>
         <strength value="required" />
         <valueSet value="http://hl7.org/fhir/uv/patient-corrections/ValueSet/PatientCorrectionCommunicationTypesVS" />
       </binding>
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-49" />
+      </mapping>
     </element>
     <element id="Communication.subject">
       <path value="Communication.subject" />
@@ -82,11 +110,19 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
       <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-48" />
+      </mapping>
     </element>
     <element id="Communication.topic">
       <path value="Communication.topic" />
       <short value="A heading/subject line for the message being sent. Could be thought of as the subject line in an email thread." />
       <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-47" />
+      </mapping>
     </element>
     <element id="Communication.about">
       <path value="Communication.about" />
@@ -95,54 +131,151 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/dwv-Communication" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/dwv-Task" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsTask" />
       </type>
       <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-46" />
+      </mapping>
     </element>
     <element id="Communication.sent">
       <path value="Communication.sent" />
       <short value="The date that this particular part of the conversation is sent.  On the initial request from the Requestor for either correction or logging a disagreement, this date/time will be used as Task.authoredOn to signify when the process was initiated on the Fulfiller." />
       <min value="1" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-45" />
+      </mapping>
     </element>
     <element id="Communication.recipient">
       <path value="Communication.recipient" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <short value="Depending on the direction of the patient correction communication, the recipient of the communication may be the Fulfiller, or it may be the Requester." />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-44" />
+      </mapping>
+    </element>
+    <element id="Communication.recipient:patient">
+      <path value="Communication.recipient" />
+      <sliceName value="patient" />
+      <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
-      <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-191" />
+      </mapping>
+    </element>
+    <element id="Communication.recipient:healthcareProvider">
+      <path value="Communication.recipient" />
+      <sliceName value="healthcareProvider" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+      </type>
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-101" />
+      </mapping>
+    </element>
+    <element id="Communication.recipient:healthProfessional">
+      <path value="Communication.recipient" />
+      <sliceName value="healthProfessional" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+      </type>
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-182" />
+      </mapping>
     </element>
     <element id="Communication.sender">
       <path value="Communication.sender" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <short value="Depending on the direction of the patient correction communication, the sender of the communication may be the Requester or it may be the Fulfiller.  On the initial request for correction or logging of disagreement, the Fulfiller will use sender to represent the Task.requester." />
       <min value="1" />
+      <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-43" />
+      </mapping>
+    </element>
+    <element id="Communication.sender:patient">
+      <path value="Communication.sender" />
+      <sliceName value="patient" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
-      <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-180" />
+      </mapping>
+    </element>
+    <element id="Communication.sender:healthcareProvider">
+      <path value="Communication.sender" />
+      <sliceName value="healthcareProvider" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+      </type>
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-193" />
+      </mapping>
+    </element>
+    <element id="Communication.sender:healthProfessional">
+      <path value="Communication.sender" />
+      <sliceName value="healthProfessional" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+      </type>
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-192" />
+      </mapping>
     </element>
     <element id="Communication.payload">
       <path value="Communication.payload" />
       <short value="The contents of this particular conversation component. If this is the original correction request or logging of a disagreement, then the payload would contain the request. If it is the final outcome of the request, then the payload would contain the final outcome information.  Otherwise it contains a single message in back and forth conversation needed to process the initial request. Since it is possible to have a Communication resource reference a conversation held outside of the FHIR Rest protocol (email, mail, portal messaging – see Communication.channel) the minimum cardinality is zero.  However, it is expected in most cases payload will be valued." />
       <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-42" />
+      </mapping>
+    </element>
+    <element id="Communication.payload.content[x]">
+      <path value="Communication.payload.content[x]" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-199" />
+      </mapping>
     </element>
     <element id="Communication.note">
       <path value="Communication.note" />

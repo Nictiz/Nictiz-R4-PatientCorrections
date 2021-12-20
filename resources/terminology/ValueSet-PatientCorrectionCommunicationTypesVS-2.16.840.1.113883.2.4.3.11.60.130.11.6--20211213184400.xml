@@ -1,0 +1,30 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.130.11.6--20211213184400"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2021-12-13T18:44:00+01:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="https://hl7.org/fhir/uv/fhir-patient-correction/ValueSet/PatientCorrectionCommunicationTypesVS"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.130.11.6"/>
+    </identifier>
+    <version value="0.4.5"/>
+    <name value="PatientCorrectionCommunicationTypesVS"/>
+    <title value="PatientCorrectionCommunicationTypesVS"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="Patient Empowerment Workgroup"/>
+    <description value="ValueSet of Communication types for use in Patient Correction Request"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="https://hl7.org/fhir/uv/fhir-patient-correction/CodeSystem/PatientCorrectionCommunicationTypes"/>
+        </include>
+    </compose>
+</ValueSet>

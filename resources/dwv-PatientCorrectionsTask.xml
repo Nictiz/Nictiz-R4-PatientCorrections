@@ -45,6 +45,11 @@
     <uri value="http://hl7.org/v2" />
     <name value="HL7 v2 Mapping" />
   </mapping>
+  <mapping>
+    <identity value="art-decor-dossierwijzigingsverzoek" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--dwv-?id=2.16.840.1.113883.2.4.3.11.60.130.1.1&amp;effectiveDate=2021-11-17T16%3A56%3A44" />
+    <name value="ART-DECOR Dataset Dossierwijzigingsverzoek" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Task" />
@@ -55,19 +60,32 @@
       <path value="Task.identifier" />
       <short value="A business identifier for the correction process." />
       <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-63" />
+      </mapping>
     </element>
     <element id="Task.status">
       <path value="Task.status" />
       <short value="The current status of the Correction Request or Log Disagreement process.  The status, in conjunction with the business status, can be used to determine the state of the process." />
+      <fixedCode value="completed" />
       <mustSupport value="false" />
       <binding>
         <strength value="required" />
         <valueSet value="http://hl7.org/fhir/ValueSet/task-status" />
       </binding>
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-64" />
+      </mapping>
     </element>
     <element id="Task.statusReason">
       <path value="Task.statusReason" />
       <short value="The reason for the correction request status. Codes to identify the reason for current status. These will typically be specific to a particular workflow." />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-65" />
+      </mapping>
     </element>
     <element id="Task.businessStatus">
       <path value="Task.businessStatus" />
@@ -77,6 +95,10 @@
     <element id="Task.intent">
       <path value="Task.intent" />
       <fixedCode value="order" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-66" />
+      </mapping>
     </element>
     <element id="Task.code">
       <path value="Task.code" />
@@ -87,6 +109,10 @@
         <strength value="required" />
         <valueSet value="http://hl7.org/fhir/uv/patient-corrections/ValueSet/PatientCorrectionTaskTypesVS" />
       </binding>
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-67" />
+      </mapping>
     </element>
     <element id="Task.for">
       <path value="Task.for" />
@@ -98,6 +124,10 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
       <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-68" />
+      </mapping>
     </element>
     <element id="Task.executionPeriod">
       <path value="Task.executionPeriod" />
@@ -108,6 +138,10 @@
       <short value="The date/time that the original request was received by the Fulfiller, kicking off the request for correction or log disagreement process. If the request was received within the payload of a Communication resource, it should match Communication.sent from the original request Communication resource." />
       <min value="1" />
       <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-69" />
+      </mapping>
     </element>
     <element id="Task.lastModified">
       <path value="Task.lastModified" />
@@ -123,6 +157,10 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
       <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-70" />
+      </mapping>
     </element>
     <element id="Task.owner">
       <path value="Task.owner" />
@@ -136,6 +174,10 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
       </type>
       <mustSupport value="false" />
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-71" />
+      </mapping>
     </element>
     <element id="Task.reasonCode">
       <path value="Task.reasonCode" />
@@ -163,6 +205,10 @@
         <human value="Task.input SHALL only be populated or updated by the CorrectionRequestor." />
         <source value="http://hl7.org/fhir/uv/patient-corrections/StructureDefinition/patient-correction-task" />
       </constraint>
+      <mapping>
+        <identity value="art-decor-dossierwijzigingsverzoek" />
+        <map value="dwv-dataelement-72" />
+      </mapping>
     </element>
     <element id="Task.input.id">
       <path value="Task.input.id" />

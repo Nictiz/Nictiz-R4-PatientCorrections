@@ -1,0 +1,36 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="PatientCorrectionTaskTypes"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/CodeSystem"/>-->
+    </meta>
+    <language value="nl-NL"/>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2021-11-29T20:26:00+01:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="https://hl7.org/fhir/uv/fhir-patient-correction/CodeSystem/PatientCorrectionTaskTypes"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.130.5.1"/>
+    </identifier>
+    <version value="0.4.4"/>
+    <name value="PatientCorrectionTaskTypes"/>
+    <title value="Patient Correction Task Types"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="Patient Empowerment Workgroup"/>
+    <description value="CodeSystem of task types for patient corrections"/>
+    <caseSensitive value="false"/>
+    <content value="complete"/>
+    <count value="2"/>
+    <concept>
+        <code value="medRecCxReq"/>
+        <display value="Correction request by the Patient or RelatedPerson"/>
+    </concept>
+    <concept>
+        <code value="medRecCxDenialDisagree"/>
+        <display value="Disagreement with a denial correction request by the Patient or RelatedPerson"/>
+    </concept>
+</CodeSystem>
