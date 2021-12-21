@@ -1,0 +1,45 @@
+<Communication xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/communication.xsd">
+    <id value="dwv-PatientCorrectionsCommunication-serverresponse"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication"/>
+    </meta>
+    <identifier>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.​130.1.40"/>
+        <value value="4c6a73b0-bf86-43f4-bd98-2eed52d7161e"/>
+    </identifier>
+    <status value="completed"/>
+    <category>
+        <coding>
+            <system
+                value="https://hl7.org/fhir/uv/fhir-patient-correction/CodeSystem/PatientCorrectionCommunicationTypes"/>
+            <code value="medRecCxReq"/>
+        </coding>
+    </category>
+    <subject>
+        <reference value="http://example.xis/Patient/3735012992"/>
+        <type value="Patient"/>
+        <display value="Willemijn Wijziger"/>
+    </subject>
+    <topic>
+        <text value="Wijzizingsverzoek: telefoonnummer"/>
+    </topic>
+    <about>
+        <reference value="http://example.xis/Task/963084e7-ac79-4de6-955f-bc431e535a3e"/>
+        <type value="Task"/>
+        <display value="Taak: wijzigingsverzoek ontvangen van patiënt"/>
+    </about>
+    <sent value="2021-10-18T09:41:00Z"/>
+    <recipient>
+        <reference value="http://example.xis/Organization/28c588de-7d85-4204-b263-48b87a484c80"/>
+        <type value="Organization"/>
+        <display value="Erasmus Universitair Medisch Centrum"/>
+    </recipient>
+    <sender>
+        <reference value="http://example.xis/Patient/3735012992"/>
+        <type value="Patient"/>
+        <display value="Willemijn Wijziger"/>
+    </sender>
+    <payload>
+        <contentString value="het telefoonnummer van mijn eerste contactpersoon klopt niet. Jaap Stiekema heeft het nummer 06-12345678"/>
+    </payload>
+</Communication>
