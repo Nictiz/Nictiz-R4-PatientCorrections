@@ -26,7 +26,7 @@
     <about>
         <reference value="http://example.xis/Task/963084e7-ac79-4de6-955f-bc431e535a3e"/>
         <type value="Task"/>
-        <display value="Taak: wijzigingsverzoek ontvangen van patiënt"/>
+        <display value="Taak: wijzigingsverzoek ontvangen van pati&#235;nt"/>
     </about>
     <sent value="2021-10-18T09:41:00Z"/>
     <recipient>
