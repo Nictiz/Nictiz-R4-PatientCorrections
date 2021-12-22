@@ -21,8 +21,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Task resource as used within the Patient Corrections (Dutch: Dossierwijzigingsverzoek) information standard. \n\n*NOTE*: this profile is inspired by the http://hl7.org/fhir/uv/patient-corrections/StructureDefinition/patient-correction-task profile version 0.4.3 and tries to mimic it as closely as possible. However, different choices have been made on several key points in order to align with other FHIR materials in the Dutch realm. Therefore, this is not a derived profile.\nDifferences include: TODO \n- This profile is based on FHIR version 4.0.1, which was the latest R4 version at the moment of creation." />
-  <purpose value="TODO" />
+  <description value="A Communication resource as used within the Patient Corrections (Dutch: Dossierwijzigingsverzoek) information standard. *NOTE*: this profile is inspired by the http://hl7.org/fhir/uv/patient-corrections/StructureDefinition/patient-correction-task profile version 0.4.5 and tries to mimic it as closely as possible. However, different choices have been made on several key points in order to align with other FHIR materials in the Dutch realm. Therefore, this is not a derived profile. This profile is based on FHIR version 4.0.1, which was the latest R4 version at the moment of creation." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -59,6 +58,7 @@
     <element id="Task.identifier">
       <path value="Task.identifier" />
       <short value="A business identifier for the correction process." />
+      <min value="1" />
       <mustSupport value="false" />
       <mapping>
         <identity value="art-decor-dossierwijzigingsverzoek" />
@@ -68,7 +68,6 @@
     <element id="Task.status">
       <path value="Task.status" />
       <short value="The current status of the Correction Request or Log Disagreement process.  The status, in conjunction with the business status, can be used to determine the state of the process." />
-      <fixedCode value="completed" />
       <mustSupport value="false" />
       <binding>
         <strength value="required" />
@@ -107,7 +106,7 @@
       <mustSupport value="false" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://hl7.org/fhir/uv/patient-corrections/ValueSet/PatientCorrectionTaskTypesVS" />
+        <valueSet value="https://hl7.org/fhir/uv/patient-corrections/ValueSet/PatientCorrectionTaskTypesVS" />
       </binding>
       <mapping>
         <identity value="art-decor-dossierwijzigingsverzoek" />
@@ -155,6 +154,8 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPerson" />
       </type>
       <mustSupport value="false" />
       <mapping>
@@ -164,6 +165,13 @@
     </element>
     <element id="Task.owner">
       <path value="Task.owner" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <short value="The entity that is responsibility for fulfilling the request. Initially, this could be populated from Communication.recipient on the Communication resource of the initial request.  TheFulfiller can then refine to a specific individual, group, role, or department.  For example, a medical records staff person." />
       <type>
         <code value="Reference" />
@@ -178,6 +186,23 @@
         <identity value="art-decor-dossierwijzigingsverzoek" />
         <map value="dwv-dataelement-71" />
       </mapping>
+    </element>
+    <element id="Task.owner:healthcareProvider">
+      <path value="Task.owner" />
+      <sliceName value="healthcareProvider" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+      </type>
+    </element>
+    <element id="Task.owner:healthProfessional">
+      <path value="Task.owner" />
+      <sliceName value="healthProfessional" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-ZibHealthProfessionalReference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+      </type>
     </element>
     <element id="Task.reasonCode">
       <path value="Task.reasonCode" />
@@ -210,16 +235,12 @@
         <map value="dwv-dataelement-72" />
       </mapping>
     </element>
-    <element id="Task.input.id">
-      <path value="Task.input.id" />
-      <max value="0" />
-    </element>
     <element id="Task.input.type">
       <path value="Task.input.type" />
       <short value="Label for input" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://hl7.org/fhir/uv/patient-corrections/ValueSet/PatientCorrectionTaskTypesVS" />
+        <valueSet value="https://hl7.org/fhir/uv/patient-corrections/ValueSet/PatientCorrectionTaskTypesVS" />
       </binding>
     </element>
     <element id="Task.input.value[x]">
@@ -232,7 +253,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/uv/patient-corrections/StructureDefinition/patient-correction-communication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication" />
       </type>
     </element>
     <element id="Task.output">
@@ -257,15 +278,11 @@
         <source value="http://hl7.org/fhir/uv/patient-corrections/StructureDefinition/patient-correction-task" />
       </constraint>
     </element>
-    <element id="Task.output.id">
-      <path value="Task.output.id" />
-      <max value="0" />
-    </element>
     <element id="Task.output.type">
       <path value="Task.output.type" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://hl7.org/fhir/uv/patient-corrections/ValueSet/PatientCorrectionOutputTypesVS" />
+        <valueSet value="https://hl7.org/fhir/uv/patient-corrections/ValueSet/PatientCorrectionOutputTypesVS" />
       </binding>
     </element>
     <element id="Task.output.value[x]">
@@ -278,7 +295,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/uv/patient-corrections/StructureDefinition/patient-correction-communication" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication" />
       </type>
     </element>
   </differential>

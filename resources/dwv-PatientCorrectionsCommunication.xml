@@ -21,8 +21,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Communication resource as used within the Patient Corrections (Dutch: Dossierwijzigingsverzoek) information standard. *NOTE*: this profile is inspired by the http://hl7.org/fhir/uv/patient-corrections/StructureDefinition/patient-correction-communication profile version 0.4.5 and tries to mimic it as closely as possible. However, different choices have been made on several key points in order to align with other FHIR materials in the Dutch realm. Therefore, this is not a derived profile.&amp;#xD;&amp;#xA;Differences include:&amp;#xD;&amp;#xA; *coming soon*.&amp;#xD;&amp;#xA; This profile is based on FHIR version 4.0.1, which was the latest R4 version at the moment of creation." />
-  <purpose value="*coming soon*" />
+  <description value="A Communication resource as used within the Patient Corrections (Dutch: Dossierwijzigingsverzoek) information standard. *NOTE*: this profile is inspired by the http://hl7.org/fhir/uv/patient-corrections/StructureDefinition/patient-correction-communication profile version 0.4.5 and tries to mimic it as closely as possible. However, different choices have been made on several key points in order to align with other FHIR materials in the Dutch realm. Therefore, this is not a derived profile. This profile is based on FHIR version 4.0.1, which was the latest R4 version at the moment of creation." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -54,7 +53,6 @@
     <element id="Communication.identifier">
       <path value="Communication.identifier" />
       <min value="1" />
-      <max value="1" />
       <mapping>
         <identity value="art-decor-dossierwijzigingsverzoek" />
         <map value="dwv-dataelement-40" />
@@ -93,7 +91,7 @@
       <mustSupport value="false" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://hl7.org/fhir/uv/patient-corrections/ValueSet/PatientCorrectionCommunicationTypesVS" />
+        <valueSet value="https://hl7.org/fhir/uv/patient-corrections/ValueSet/PatientCorrectionCommunicationTypesVS" />
       </binding>
       <mapping>
         <identity value="art-decor-dossierwijzigingsverzoek" />
