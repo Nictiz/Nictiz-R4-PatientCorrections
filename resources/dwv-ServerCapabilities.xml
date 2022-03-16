@@ -33,13 +33,6 @@
                 <code value="create" />
             </interaction>
         </resource>
-        <resource>
-            <type value="Task" />
-            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsTask"/>
-            <interaction>
-                <code value="read" />
-            </interaction>
-        </resource>
         <interaction>
             <code value="batch"/>
         </interaction>
