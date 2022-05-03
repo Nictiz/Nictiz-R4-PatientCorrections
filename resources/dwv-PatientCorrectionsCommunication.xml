@@ -157,7 +157,6 @@
         <rules value="open" />
       </slicing>
       <short value="Depending on the direction of the patient correction communication, the recipient of the communication may be the Fulfiller, or it may be the Requester." />
-      <min value="1" />
       <max value="1" />
       <mustSupport value="false" />
       <mapping>
@@ -215,7 +214,6 @@
         <rules value="open" />
       </slicing>
       <short value="Depending on the direction of the patient correction communication, the sender of the communication may be the Requester or it may be the Fulfiller.  On the initial request for correction or logging of disagreement, the Fulfiller will use sender to represent the Task.requester." />
-      <min value="1" />
       <mustSupport value="false" />
       <mapping>
         <identity value="art-decor-dossierwijzigingsverzoek" />

@@ -1,5 +1,5 @@
 <Communication xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/communication.xsd">
-    <id value="dwv-PatientCorrectionsCommunication-serverresponse"/>
+    <id value="dwv-PatientCorrectionsCommunication-01"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication"/>
     </meta>
@@ -15,25 +15,10 @@
             <code value="medRecCxReq"/>
         </coding>
     </category>
-    <subject>
-        <reference value="http://example.xis/Patient/3735012992"/>
-        <type value="Patient"/>
-        <display value="Willemijn Wijziger"/>
-    </subject>
     <topic>
         <text value="Wijzizingsverzoek: telefoonnummer"/>
     </topic>
-    <sent value="2021-10-18T09:41:00Z"/>
-    <recipient>
-        <reference value="http://example.xis/Organization/28c588de-7d85-4204-b263-48b87a484c80"/>
-        <type value="Organization"/>
-        <display value="Erasmus Universitair Medisch Centrum"/>
-    </recipient>
-    <sender>
-        <reference value="http://example.xis/Patient/3735012992"/>
-        <type value="Patient"/>
-        <display value="Willemijn Wijziger"/>
-    </sender>
+    <sent value="2022-03-29T09:41:00Z"/>
     <payload>
         <contentString value="het telefoonnummer van mijn eerste contactpersoon klopt niet. Jaap Stiekema heeft het nummer 06-12345678"/>
     </payload>

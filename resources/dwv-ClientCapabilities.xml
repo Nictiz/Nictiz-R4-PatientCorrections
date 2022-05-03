@@ -62,7 +62,7 @@
             </interaction>
         </resource>
         <interaction>
-            <code value="batch"/>
+            <code value="transaction"/>
         </interaction>
     </rest>
 </CapabilityStatement>
