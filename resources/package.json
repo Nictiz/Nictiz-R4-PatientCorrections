@@ -1,6 +1,6 @@
 {
     "name": "nictiz.fhir.nl.r4.patientcorrections ",
-    "version": "0.2.0",
+    "version": "0.2.0-poc",
     "homepage": "",
     "title": "FHIR implementation of Patient Corrections",
     "description": "NL package of FHIR STU3 conformance resources for Patient Corrections.",
