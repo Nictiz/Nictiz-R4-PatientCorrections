@@ -8,7 +8,7 @@
         <value value="123456789"/>
     </identifier>
     <name>
-        <use value="usual" />
+        <use value="official" />
         <text value="Willemijn Wijziger" />
         <family value="Wijziger">
             <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
