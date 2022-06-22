@@ -1,0 +1,11 @@
+<Organization xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/patient.xsd">
+    <id value="nl-core-HealthcareProvider-Erasmus"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+    </meta>
+    <identifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+        <value value="06020806"/>
+    </identifier>
+    <name value="Erasmus Medisch Centrum"/>
+</Organization>

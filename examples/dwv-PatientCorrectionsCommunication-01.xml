@@ -15,10 +15,25 @@
             <code value="medRecCxReq"/>
         </coding>
     </category>
+    <subject>
+        <reference value="Patient/nl-core-Patient-Wijziger"/>
+        <type value="Patient"/>
+        <display value="Willemijn Wijziger"/>
+    </subject>
     <topic>
         <text value="Wijzizingsverzoek: telefoonnummer"/>
     </topic>
     <sent value="2022-03-29T09:41:00Z"/>
+    <recipient>
+        <reference value="Organzation/nl-core-HealthcareProvider-Erasmus"/>
+        <type value="Organization"/>
+        <display value="Erasmus Medisch Centrum"/>
+    </recipient>
+    <sender>
+        <reference value="Patient/nl-core-Patient-Wijziger"/>
+        <type value="Patient"/>
+        <display value="Willemijn Wijziger"/>
+    </sender>
     <payload>
         <contentString value="het telefoonnummer van mijn eerste contactpersoon klopt niet. Jaap Stiekema heeft het nummer 06-12345678"/>
     </payload>
