@@ -116,6 +116,7 @@
     <element id="Communication.topic">
       <path value="Communication.topic" />
       <short value="A heading/subject line for the message being sent. Could be thought of as the subject line in an email thread." />
+      <min value="1" />
       <mustSupport value="false" />
       <mapping>
         <identity value="art-decor-dossierwijzigingsverzoek" />
@@ -157,7 +158,7 @@
         <rules value="open" />
       </slicing>
       <short value="Depending on the direction of the patient correction communication, the recipient of the communication may be the Fulfiller, or it may be the Requester." />
-      <max value="1" />
+      <min value="1" />
       <mustSupport value="false" />
       <mapping>
         <identity value="art-decor-dossierwijzigingsverzoek" />
@@ -214,6 +215,7 @@
         <rules value="open" />
       </slicing>
       <short value="Depending on the direction of the patient correction communication, the sender of the communication may be the Requester or it may be the Fulfiller.  On the initial request for correction or logging of disagreement, the Fulfiller will use sender to represent the Task.requester." />
+      <min value="1" />
       <mustSupport value="false" />
       <mapping>
         <identity value="art-decor-dossierwijzigingsverzoek" />
