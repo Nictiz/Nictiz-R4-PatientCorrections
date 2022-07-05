@@ -21,11 +21,11 @@
         <display value="Willemijn Wijziger"/>
     </subject>
     <topic>
-        <text value="Wijzizingsverzoek: telefoonnummer"/>
+        <text value="Wijzigingsverzoek: telefoonnummer"/>
     </topic>
     <sent value="2022-03-29T09:41:00Z"/>
     <recipient>
-        <reference value="Organzation/nl-core-HealthcareProvider-Erasmus"/>
+        <reference value="Organization/nl-core-HealthcareProvider-Erasmus"/>
         <type value="Organization"/>
         <display value="Erasmus Medisch Centrum"/>
     </recipient>
@@ -35,6 +35,6 @@
         <display value="Willemijn Wijziger"/>
     </sender>
     <payload>
-        <contentString value="het telefoonnummer van mijn eerste contactpersoon klopt niet. Jaap Stiekema heeft het nummer 06-12345678"/>
+        <contentString value="Het telefoonnummer van mijn eerste contactpersoon klopt niet. Jaap Stiekema heeft het nummer 06-12345678"/>
     </payload>
 </Communication>
