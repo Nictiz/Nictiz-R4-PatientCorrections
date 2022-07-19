@@ -2,7 +2,7 @@
 
 This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for Patient Corrections (Dutch: Dossierwijzigingsverzoek). Currently in development and therefore not yet suitable for implementation. The FHIR IG, also in draft status, can be found at the [informatiestandaarden wiki](https://informatiestandaarden.nictiz.nl/wiki/MedMij:Vpoc/FHIR_Patient_Corrections).
 
-This repository is maintained by the Dutch National Intitute for ICT in Healthcare (Nictiz).
+This repository is maintained by the Dutch National Institute for ICT in Healthcare (Nictiz).
 
 ## Official releases
 
