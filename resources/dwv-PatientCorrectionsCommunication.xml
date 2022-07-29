@@ -71,7 +71,6 @@
     <element id="Communication.category">
       <path value="Communication.category" />
       <min value="1" />
-      <max value="1" />
       <patternCodeableConcept>
         <coding>
           <system value="https://hl7.org/fhir/uv/fhir-patient-correction/CodeSystem/PatientCorrectionCommunicationTypes" />
