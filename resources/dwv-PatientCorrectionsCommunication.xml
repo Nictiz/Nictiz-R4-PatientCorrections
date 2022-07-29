@@ -8,7 +8,7 @@
     <valueCode value="patient" />
   </extension>
   <url value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication" />
-  <version value="0.1.0" />
+  <version value="0.4.0-poc" />
   <name value="DwvPatientCorrectionsCommunication" />
   <title value="dwv PatientCorrectionsCommunication" />
   <status value="draft" />
@@ -21,7 +21,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Communication resource as used within the Patient Corrections (Dutch: Dossierwijzigingsverzoek) information standard. *NOTE*: this profile is inspired by the https://hl7.org/fhir/uv/fhir-patient-correction/StructureDefinition/patient-correction-communication profile version 0.4.5 and tries to mimic it as closely as possible. However, different choices have been made on several key points in order to align with other FHIR materials in the Dutch realm. Therefore, this is not a derived profile. This profile is based on FHIR version 4.0.1, which was the latest R4 version at the moment of creation." />
+  <description value="A Communication resource as used within the Patient Corrections (Dutch: Dossierwijzigingsverzoek) information standard. *NOTE*: this profile is inspired by the https://hl7.org/fhir/uv/fhir-patient-correction/StructureDefinition/patient-correction-communication profile. However, different choices have been made on several key points in order to align with other FHIR materials in the Dutch realm. Therefore, this is not a derived profile. This profile is based on FHIR version 4.0.1, which was the latest R4 version at the moment of creation." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -140,6 +140,12 @@
       </slicing>
       <short value="The recipient of the correction request, in most cases this will be the healthcare provider (e.g. a hospital); the health professional (e.g. the doctor) MAY be used if known." />
       <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </type>
       <mapping>
         <identity value="art-decor-dossierwijzigingsverzoek" />
         <map value="dwv-dataelement-44" />
@@ -182,11 +188,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
       <mapping>
