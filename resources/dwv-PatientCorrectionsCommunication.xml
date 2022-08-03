@@ -16,8 +16,8 @@
   <contact>
     <name value="Nictiz" />
     <telecom>
-      <system value="email" />
-      <value value="info@nictiz.nl" />
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
       <use value="work" />
     </telecom>
   </contact>
@@ -42,7 +42,7 @@
   <mapping>
     <identity value="art-decor-dossierwijzigingsverzoek" />
     <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--dwv-?id=2.16.840.1.113883.2.4.3.11.60.130.1.1&amp;effectiveDate=2021-11-17T16%3A56%3A44" />
-    <name value="ART-DECOR Dataset Dossierwijzigingsverzoek" />
+    <name value="ART-DECOR-dataset Dossierwijzigingsverzoek" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
