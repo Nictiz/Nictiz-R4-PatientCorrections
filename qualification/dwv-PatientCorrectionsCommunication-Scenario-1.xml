@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="dwv-PatientCorrectionsCommunication-Scenario-1" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication-Scenario-1" />
+  <version value="0.1.0" />
+  <name value="DwvPatientCorrectionsCommunicationScenario1" />
+  <title value="dwv PatientCorrectionsCommunication Scenario 1" />
+  <status value="draft" />
+  <experimental value="true" />
+  <description value="Constrained profile for qualification purposes. Not suited for implementation." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Communication" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Communication.identifier.system">
+      <path value="Communication.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Communication.identifier.value">
+      <path value="Communication.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Communication.category.coding">
+      <path value="Communication.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Communication.category.coding:requiredCoding">
+      <path value="Communication.category.coding" />
+      <sliceName value="requiredCoding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Communication.category.coding:requiredCoding.system">
+      <path value="Communication.category.coding.system" />
+      <min value="1" />
+      <fixedUri value="https://hl7.org/fhir/uv/fhir-patient-correction/CodeSystem/PatientCorrectionCommunicationTypes" />
+    </element>
+    <element id="Communication.category.coding:requiredCoding.code">
+      <path value="Communication.category.coding.code" />
+      <min value="1" />
+      <fixedCode value="medRecCxReq" />
+    </element>
+    <element id="Communication.category.coding:requiredCoding.display">
+      <path value="Communication.category.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Communication.subject">
+      <path value="Communication.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+    </element>
+    <element id="Communication.subject.reference">
+      <path value="Communication.subject.reference" />
+      <min value="1" />
+    </element>
+    <element id="Communication.subject.type">
+      <path value="Communication.subject.type" />
+      <min value="1" />
+      <fixedUri value="Patient" />
+    </element>
+    <element id="Communication.subject.display">
+      <path value="Communication.subject.display" />
+      <min value="1" />
+    </element>
+    <element id="Communication.topic.text">
+      <path value="Communication.topic.text" />
+      <fixedString value="Telefoonnummer wijzigen" />
+    </element>
+    <element id="Communication.recipient">
+      <path value="Communication.recipient" />
+      <max value="1" />
+    </element>
+    <element id="Communication.recipient:healthcareProvider">
+      <path value="Communication.recipient" />
+      <sliceName value="healthcareProvider" />
+    </element>
+    <element id="Communication.recipient:healthcareProvider.reference">
+      <path value="Communication.recipient.reference" />
+      <min value="1" />
+    </element>
+    <element id="Communication.recipient:healthcareProvider.type">
+      <path value="Communication.recipient.type" />
+      <min value="1" />
+      <fixedUri value="Organization" />
+    </element>
+    <element id="Communication.recipient:healthcareProvider.display">
+      <path value="Communication.recipient.display" />
+      <min value="1" />
+    </element>
+    <element id="Communication.recipient:healthProfessional">
+      <path value="Communication.recipient" />
+      <sliceName value="healthProfessional" />
+      <max value="0" />
+    </element>
+    <element id="Communication.sender">
+      <path value="Communication.sender" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+    </element>
+    <element id="Communication.sender.reference">
+      <path value="Communication.sender.reference" />
+      <min value="1" />
+    </element>
+    <element id="Communication.sender.type">
+      <path value="Communication.sender.type" />
+      <min value="1" />
+      <fixedUri value="Patient" />
+    </element>
+    <element id="Communication.sender.display">
+      <path value="Communication.sender.display" />
+      <min value="1" />
+    </element>
+    <element id="Communication.payload.content[x]">
+      <path value="Communication.payload.content[x]" />
+      <fixedString value="Ik heb in mijn dossier gezien dat mijn telefoonnummer niet klopt. Dit wil ik graag gewijzigd hebben. Ik zou graag teruggebeld willen worden." />
+    </element>
+  </differential>
+</StructureDefinition>
