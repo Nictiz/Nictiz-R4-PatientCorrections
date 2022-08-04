@@ -89,7 +89,7 @@
     </element>
     <element id="Communication.subject">
       <path value="Communication.subject" />
-      <short value="The Patient that the correction request applies to." />
+      <short value="The patient that the correction request applies to." />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -137,7 +137,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="The recipient of the correction request, in most cases this will be the healthcare provider (e.g. a hospital); the health professional (e.g. the doctor) MAY be used if known." />
+      <short value="The recipient of the correction request, healthcare provider and optionally (if known) the health professional." />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -183,7 +183,7 @@
     </element>
     <element id="Communication.sender">
       <path value="Communication.sender" />
-      <short value="A reference to the sender of the correction request, in most cases this will be the patient." />
+      <short value="A reference to the sender of the correction request." />
       <min value="1" />
       <type>
         <code value="Reference" />
