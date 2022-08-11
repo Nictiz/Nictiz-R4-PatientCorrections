@@ -84,12 +84,12 @@
       <sliceName value="patientCorrectionCommunicationType" />
       <min value="1" />
       <max value="1" />
-      <fixedCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="https://hl7.org/fhir/uv/fhir-patient-correction/CodeSystem/PatientCorrectionCommunicationTypes" />
           <code value="medRecCxReq" />
         </coding>
-      </fixedCodeableConcept>
+      </patternCodeableConcept>
       <binding>
         <strength value="required" />
         <description value="ValueSet of Communication types for patient request for corrections" />
