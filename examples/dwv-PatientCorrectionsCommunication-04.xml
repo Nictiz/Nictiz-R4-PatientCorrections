@@ -1,0 +1,40 @@
+<Communication xmlns="http://hl7.org/fhir">
+    <id value="dwv-PatientCorrectionsCommunication-04"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication"/>
+    </meta>
+    <identifier>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.​130.1.40"/>
+        <value value="3bb12830-8b93-4484-a595-97653a68f17c"/>
+    </identifier>
+    <status value="completed"/>
+    <category>
+        <coding>
+            <system value="https://hl7.org/fhir/uv/fhir-patient-correction/CodeSystem/PatientCorrectionCommunicationTypes"/>
+            <code value="medRecCxReq"/>
+            <display value="Correction request by the Patient or RelatedPerson"/>
+        </coding>
+    </category>
+    <subject>
+        <reference value="Patient/nl-core-Patient-Wijziger"/>
+        <type value="Patient"/>
+        <display value="Willemijn Wijziger"/>
+    </subject>
+    <topic>
+        <text value="Tijdelijk adres aanpassen"/>
+    </topic>
+    <sent value="2022-03-29T09:41:00Z"/>
+    <recipient>
+        <reference value="Organization/nl-core-HealthcareProvider-Erasmus"/>
+        <type value="Organization"/>
+        <display value="Erasmus Medisch Centrum"/>
+    </recipient>
+    <sender>
+        <reference value="Patient/nl-core-Patient-Wijziger"/>
+        <type value="Patient"/>
+        <display value="Willemijn Wijziger"/>
+    </sender>
+    <payload>
+        <contentString value="Wij gaan tijdelijk op een ander adres wonen in verband met een verbouwing, kunt u mijn adres aanpassen naar: Knolweg 1000, 9999 XA Stitswerd."/>
+    </payload>
+</Communication>

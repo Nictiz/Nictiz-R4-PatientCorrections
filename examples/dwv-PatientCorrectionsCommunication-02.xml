@@ -1,0 +1,40 @@
+<Communication xmlns="http://hl7.org/fhir">
+    <id value="dwv-PatientCorrectionsCommunication-02"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication"/>
+    </meta>
+    <identifier>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.​130.1.40"/>
+        <value value="0287d8e7-d47b-4465-9cff-fab15bb3dfd2"/>
+    </identifier>
+    <status value="completed"/>
+    <category>
+        <coding>
+            <system value="https://hl7.org/fhir/uv/fhir-patient-correction/CodeSystem/PatientCorrectionCommunicationTypes"/>
+            <code value="medRecCxReq"/>
+            <display value="Correction request by the Patient or RelatedPerson"/>
+        </coding>
+    </category>
+    <subject>
+        <reference value="Patient/nl-core-Patient-Wijziger"/>
+        <type value="Patient"/>
+        <display value="Willemijn Wijziger"/>
+    </subject>
+    <topic>
+        <text value="Allergie niet juist"/>
+    </topic>
+    <sent value="2022-03-29T09:41:00Z"/>
+    <recipient>
+        <reference value="Organization/nl-core-HealthcareProvider-Erasmus"/>
+        <type value="Organization"/>
+        <display value="Erasmus Medisch Centrum"/>
+    </recipient>
+    <sender>
+        <reference value="Patient/nl-core-Patient-Wijziger"/>
+        <type value="Patient"/>
+        <display value="Willemijn Wijziger"/>
+    </sender>
+    <payload>
+        <contentString value="In mijn dossier staat dat ik allergisch ben voor bijengif, dit is niet juist. Kunt u dit verwijderen?"/>
+    </payload>
+</Communication>
