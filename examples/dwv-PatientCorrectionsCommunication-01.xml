@@ -10,9 +10,9 @@
     <status value="completed"/>
     <category>
         <coding>
-            <system
-                value="https://hl7.org/fhir/uv/fhir-patient-correction/CodeSystem/PatientCorrectionCommunicationTypes"/>
+            <system value="https://hl7.org/fhir/uv/fhir-patient-correction/CodeSystem/PatientCorrectionCommunicationTypes"/>
             <code value="medRecCxReq"/>
+            <display value="Correction request by the Patient or RelatedPerson"/>
         </coding>
     </category>
     <subject>
@@ -35,6 +35,6 @@
         <display value="Willemijn Wijziger"/>
     </sender>
     <payload>
-        <contentString value="Het telefoonnummer van mijn eerste contactpersoon klopt niet. Jaap Stiekema heeft het nummer 06-12345678"/>
+        <contentString value="Het telefoonnummer van mijn eerste contactpersoon klopt niet. Jaap Stiekema heeft het nummer 06-12345678."/>
     </payload>
 </Communication>
