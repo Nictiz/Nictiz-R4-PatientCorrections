@@ -4,10 +4,10 @@
     xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/capabilitystatement.xsd">
     <id value="dwv-SendReceive"/>
     <url value="http://nictiz.nl/fhir/CapabilityStatement/dwv-SendReceive"/>
-    <version value="0.4.0-poc"/>
+    <version value="1.0.0"/>
     <name value="DwvSendReceive"/>
     <title value="dwv SendReceive"/>
-    <status value="draft"/>
+    <status value="active"/>
     <publisher value="Nictiz"/>
     <contact>
         <name value="Nictiz"/>
