@@ -1,7 +1,7 @@
 {
-    "name": "nictiz.fhir.nl.r4.patientcorrections ",
-    "version": "0.4.0-poc",
-    "homepage": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:Vpoc/FHIR_Patient_Corrections",
+    "name": "nictiz.fhir.nl.r4.patientcorrections",
+    "version": "1.0.0",
+    "homepage": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:Landingspagina_Dossierwijzigingsverzoek",
     "title": "FHIR implementation of Patient Corrections",
     "description": "NL package of FHIR R4 conformance resources for Patient Corrections.",
     "dependencies": {
