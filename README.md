@@ -1,6 +1,6 @@
 # Nictiz-R4-PatientCorrections
 
-This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for the information standard [Patient Corrections (Dossierwijzigingsverzoek)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Dossierwijzigingsverzoek).
+This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for the information standard [Patient Corrections (Dossierwijzigingsverzoek)](https://informatiestandaarden.nictiz.nl/wiki/MedMij:Landingspagina_Dossierwijzigingsverzoek).
 
 This repository is maintained by the Dutch National Institute for ICT in Healthcare (Nictiz).
 
