@@ -25,7 +25,7 @@
     </topic>
     <sent value="2022-03-29T09:41:00Z"/>
     <recipient>
-        <reference value="Organization/nl-core-HealthcareProvider-Erasmus"/>
+        <reference value="Organization/nl-core-HealthcareProvider-Organization-Erasmus"/>
         <type value="Organization"/>
         <display value="Erasmus Medisch Centrum"/>
     </recipient>
