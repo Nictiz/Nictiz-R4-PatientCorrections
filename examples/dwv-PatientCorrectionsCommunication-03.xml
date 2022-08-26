@@ -1,11 +1,11 @@
 <Communication xmlns="http://hl7.org/fhir">
-    <id value="dwv-PatientCorrectionsCommunication-01"/>
+    <id value="dwv-PatientCorrectionsCommunication-03"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication"/>
     </meta>
     <identifier>
         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.​130.1.40"/>
-        <value value="4c6a73b0-bf86-43f4-bd98-2eed52d7161e"/>
+        <value value="7c9e1076-4e13-4010-a166-7ca3fe6618fc"/>
     </identifier>
     <status value="completed"/>
     <category>
@@ -21,7 +21,7 @@
         <display value="Willemijn Wijziger"/>
     </subject>
     <topic>
-        <text value="Wijzigingsverzoek: telefoonnummer"/>
+        <text value="Mijn gewicht is fout"/>
     </topic>
     <sent value="2022-03-29T09:41:00Z"/>
     <recipient>
@@ -35,6 +35,6 @@
         <display value="Willemijn Wijziger"/>
     </sender>
     <payload>
-        <contentString value="Het telefoonnummer van mijn eerste contactpersoon klopt niet. Jaap Stiekema heeft het nummer 06-12345678."/>
+        <contentString value="Op 14 februari 2022 woog ik 72 kg en er staat dat ik 74 kg weeg, dit is fout."/>
     </payload>
 </Communication>

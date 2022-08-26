@@ -1,12 +1,12 @@
 # Nictiz-R4-PatientCorrections
 
-This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for Patient Corrections (Dutch: Dossierwijzigingsverzoek). Currently in development and therefore not yet suitable for implementation. The FHIR IG, also in draft status, can be found at the [informatiestandaarden wiki](https://informatiestandaarden.nictiz.nl/wiki/MedMij:Vpoc/FHIR_Patient_Corrections).
+This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for the information standard [Patient Corrections (Dossierwijzigingsverzoek)](https://informatiestandaarden.nictiz.nl/wiki/MedMij:Landingspagina_Dossierwijzigingsverzoek).
 
-This repository is maintained by the Dutch National Intitute for ICT in Healthcare (Nictiz).
+This repository is maintained by the Dutch National Institute for ICT in Healthcare (Nictiz).
 
 ## Official releases
 
-Resources in this repository should be considered unstable and not suited for immediate implementation. Stable versions will be released using the FHIR package mechanism on [Simplifier](https://simplifier.net/packages). At the moment, no package has been released for the current project.
+Stable versions will be released using the FHIR package mechanism on [Simplifier](https://simplifier.net/packages).
 
 ## Profiling guidelines
 
@@ -14,4 +14,4 @@ The profiling guidelines for this project can be found at the [informatiestandaa
 
 ## Dependencies
 
-This information standard is inspired by and re-uses some materials from the international [HL7 Patient Corrections Implementation Guide](https://build.fhir.org/ig/HL7/fhir-patient-correction/index.html).
+This repository has a dependency on the [R4 nl-core package](https://simplifier.net/packages/nictiz.fhir.nl.r4.nl-core). The information standard is inspired by and re-uses some materials from the international [HL7 Patient Corrections Implementation Guide](https://build.fhir.org/ig/HL7/fhir-patient-correction/index.html).

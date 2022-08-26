@@ -1,5 +1,5 @@
-<Organization xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/patient.xsd">
-    <id value="nl-core-HealthcareProvider-Erasmus"/>
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="nl-core-HealthcareProvider-Organization-Erasmus"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
     </meta>

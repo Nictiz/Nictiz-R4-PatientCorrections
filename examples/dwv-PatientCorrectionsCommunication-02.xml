@@ -1,11 +1,11 @@
 <Communication xmlns="http://hl7.org/fhir">
-    <id value="dwv-PatientCorrectionsCommunication-01"/>
+    <id value="dwv-PatientCorrectionsCommunication-02"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/dwv-PatientCorrectionsCommunication"/>
     </meta>
     <identifier>
         <system value="urn:oid:2.16.840.1.113883.2.4.3.11.999.​130.1.40"/>
-        <value value="4c6a73b0-bf86-43f4-bd98-2eed52d7161e"/>
+        <value value="0287d8e7-d47b-4465-9cff-fab15bb3dfd2"/>
     </identifier>
     <status value="completed"/>
     <category>
@@ -21,7 +21,7 @@
         <display value="Willemijn Wijziger"/>
     </subject>
     <topic>
-        <text value="Wijzigingsverzoek: telefoonnummer"/>
+        <text value="Allergie niet juist"/>
     </topic>
     <sent value="2022-03-29T09:41:00Z"/>
     <recipient>
@@ -35,6 +35,6 @@
         <display value="Willemijn Wijziger"/>
     </sender>
     <payload>
-        <contentString value="Het telefoonnummer van mijn eerste contactpersoon klopt niet. Jaap Stiekema heeft het nummer 06-12345678."/>
+        <contentString value="In mijn dossier staat dat ik allergisch ben voor bijengif, dit is niet juist. Kunt u dit verwijderen?"/>
     </payload>
 </Communication>
