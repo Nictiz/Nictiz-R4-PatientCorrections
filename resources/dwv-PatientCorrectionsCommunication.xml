@@ -41,7 +41,7 @@
   </mapping>
   <mapping>
     <identity value="art-decor-dossierwijzigingsverzoek" />
-    <uri value="https://decor.nictiz.nl/art-decor/decor-datasets--dwv-?id=2.16.840.1.113883.2.4.3.11.60.130.1.1&amp;effectiveDate=2021-11-17T16%3A56%3A44" />
+    <uri value="https://decor.nictiz.nl/pub/dossierwijzigingsverzoek/dwv-html-20220826T185150/ds-2.16.840.1.113883.2.4.3.11.60.130.1.1-2021-11-17T165644.html" />
     <name value="ART-DECOR-dataset Dossierwijzigingsverzoek" />
   </mapping>
   <kind value="resource" />
