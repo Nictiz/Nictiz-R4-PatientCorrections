@@ -25,21 +25,6 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="workflow" />
-    <uri value="http://hl7.org/fhir/workflow" />
-    <name value="Workflow Pattern" />
-  </mapping>
-  <mapping>
-    <identity value="w5" />
-    <uri value="http://hl7.org/fhir/fivews" />
-    <name value="FiveWs Pattern Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="rim" />
-    <uri value="http://hl7.org/v3" />
-    <name value="RIM Mapping" />
-  </mapping>
-  <mapping>
     <identity value="art-decor-dossierwijzigingsverzoek" />
     <uri value="https://decor.nictiz.nl/pub/dossierwijzigingsverzoek/dwv-html-20220826T185150/ds-2.16.840.1.113883.2.4.3.11.60.130.1.1-2021-11-17T165644.html" />
     <name value="ART-DECOR-dataset Dossierwijzigingsverzoek" />
